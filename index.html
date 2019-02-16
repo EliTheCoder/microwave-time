@@ -13,11 +13,13 @@
   <input type="number" placeholder="amount" id="a2" />
   <button id="calc">calculate</button>
   <p id="output"></p>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script>
-    $("#calc").onclick = calculate;
+    $("#calc").click(calculate);
+
     function calculate() {
-      let answer = (parseInt($("#w1").value) * parseInt($("#s1").value) * parseInt($("#a1").value))/(parseInt($("#w2").value)*parseInt($("#a2").value))
-      $("#output").innerHTML = answer+" seconds";
+      let answer = (parseInt($("#w1").val()) * parseInt($("#s1").val()) * parseInt($("#a1").val())) / (parseInt($("#w2").val()) * parseInt($("#a2").val()));
+      $("#output").html(answer + " seconds");
     }
   </script>
 </body>
