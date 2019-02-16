@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Microwave Time</title>
+</head>
+
+<body>
+  <input type="number" placeholder="wattage" id="w1" />
+  <input type="number" placeholder="seconds" id="s1" />
+  <input type="number" placeholder="amount" id="a1" />
+  <input type="number" placeholder="wattage" id="w2" />
+  <input type="number" placeholder="amount" id="a2" />
+  <button id="calc">calculate</button>
+  <p id="output"></p>
+  <script>
+    $("#calc").onclick = calculate;
+    function calculate() {
+      let answer = (parseInt($("#w1").value) * parseInt($("#s1").value) * parseInt($("#a1").value))/(parseInt($("#w2").value)*parseInt($("#a2").value))
+      $("#output").innerHTML = answer+" seconds";
+    }
+  </script>
+</body>
+
+</html>
