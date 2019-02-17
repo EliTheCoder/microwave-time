@@ -18,7 +18,7 @@
     $("#calc").click(calculate);
 
     function calculate() {
-      let answer = (parseInt($("#w1").val()) * parseInt($("#s1").val()) * parseInt($("#a1").val())) / (parseInt($("#w2").val()) * parseInt($("#a2").val()));
+      let answer = (parseInt($("#w1").val()) * parseInt($("#s1").val()) * parseInt($("#a1").val())) / (parseInt($("#w2").val()) / parseInt($("#a2").val()));
       $("#output").html(answer + " seconds");
     }
   </script>
